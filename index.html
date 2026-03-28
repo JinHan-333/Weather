@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forecasting Feelings — The Living Archive</title>
+  <meta name="description" content="A collaborative inquiry into how shifting weather patterns shape the daily commute, emotional landscapes, and stress thresholds of the modern student." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── TOP NAV ── -->
+  <nav class="topnav" id="topnav">
+    <a class="topnav-logo" href="#hero">Forecasting Feelings</a>
+    <div class="topnav-links">
+      <a href="#atmosphere" class="topnav-link active" id="nav-atmosphere">Atmosphere</a>
+      <a href="#archive"    class="topnav-link"        id="nav-archive">Archive</a>
+      <a href="#methodology" class="topnav-link"       id="nav-methodology">Methodology</a>
+    </div>
+    <div class="topnav-icons">
+      <button class="icon-btn" aria-label="Profile" id="icon-profile">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      </button>
+      <button class="icon-btn" aria-label="Settings" id="icon-settings">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── LAYOUT WRAPPER ── -->
+  <div class="layout">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-title">Forecasting Feelings</div>
+        <div class="brand-divider"></div>
+        <div class="brand-sub-group">
+          <div class="brand-sub-title">The Shared Forecast</div>
+          <div class="brand-sub">Weather, Commute, and Mood Archive</div>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="#atmosphere" class="snav-item active" id="snav-atmosphere">
+          <svg class="snav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l2 2m0 0l7-7 7 7M5 11v9a1 1 0 001 1h3m10-10l2-2m-2 2v9a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Atmosphere
+        </a>
+        <a href="#check-in" class="snav-item" id="snav-checkin">
+          <svg class="snav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v1m0 16v1M4.22 4.22l.7.7m12.02 12.02l.7.7M3 12h1m16 0h1M4.92 19.08l.7-.7M18.36 5.64l.7-.7"/><circle cx="12" cy="12" r="4"/></svg>
+          Check-In
+        </a>
+        <a href="#archive" class="snav-item" id="snav-archive">
+          <svg class="snav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          Archive
+        </a>
+        <a href="#methodology" class="snav-item" id="snav-methodology">
+          <svg class="snav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          Method
+        </a>
+        <a href="#about" class="snav-item" id="snav-about">
+          <svg class="snav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          About
+        </a>
+      </nav>
+
+      <a href="#check-in" class="sidebar-cta">Submit Check-In</a>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- ── HERO ── -->
+      <section class="hero-section" id="hero">
+        <div class="hero-left">
+          <p class="eyebrow">Weather / Commute / Mood Visualization</p>
+          <h1 class="hero-title">Forecasting<br><em>Feelings</em></h1>
+          <p class="hero-desc">A shared data visualization exploring how daily weather conditions shape student commutes, mood, and stress before class.</p>
+          <p class="hero-support">Daily check-ins become a collective weather-emotion canvas.</p>
+          <div class="hero-ctas">
+            <a href="#check-in" class="btn-primary" id="btn-submit-hero">Submit Check-In</a>
+            <a href="#archive"  class="btn-ghost"   id="btn-archive-hero">Explore the Archive</a>
+          </div>
+        </div>
+
+        <!-- TODAY'S ATMOSPHERE PANEL -->
+        <div class="today-panel" id="today-panel">
+          <div class="today-panel-header">
+            <span class="today-tag">Live</span>
+            <span class="today-title">Today's Atmosphere</span>
+          </div>
+          <div class="today-canvas-wrap">
+            <canvas id="today-canvas"></canvas>
+            <div class="today-wx-label" id="today-wx-label"></div>
+          </div>
+          <div class="today-stats">
+            <div class="today-stat">
+              <div class="today-stat-label">Most Reported</div>
+              <div class="today-stat-val" id="ts-weather">—</div>
+            </div>
+            <div class="today-stat">
+              <div class="today-stat-label">Avg Commute</div>
+              <div class="today-stat-val" id="ts-commute">—</div>
+            </div>
+            <div class="today-stat">
+              <div class="today-stat-label">Avg Stress</div>
+              <div class="today-stat-val" id="ts-stress">—</div>
+            </div>
+            <div class="today-stat">
+              <div class="today-stat-label">Avg Mood</div>
+              <div class="today-stat-val" id="ts-mood">—</div>
+            </div>
+          </div>
+          <div class="today-entries" id="today-entries">— check-ins recorded</div>
+        </div>
+      </section>
+
+      <!-- ── CHECK-IN FORM ── -->
+      <section class="checkin-section" id="check-in">
+        <div class="checkin-left">
+          <h2 class="section-heading serif-italic">Contribute to the<br>Archive</h2>
+          <p class="checkin-desc">Data is ephemeral. By documenting your daily transit, you help build a living map of the collective student psyche. Every entry adds a unique texture to the landscape.</p>
+        </div>
+
+        <form class="checkin-form" id="checkin-form" novalidate>
+
+          <!-- Weather -->
+          <div class="form-group" id="group-weather">
+            <label class="form-label-sm">What is today's weather?</label>
+            <div class="wx-grid">
+              <button type="button" class="wx-pill" data-value="sunny"  id="wx-sunny"  aria-pressed="false"><span class="wx-icon">☀️</span><span class="wx-text">Sunny</span></button>
+              <button type="button" class="wx-pill" data-value="cloudy" id="wx-cloudy" aria-pressed="false"><span class="wx-icon">☁️</span><span class="wx-text">Cloudy</span></button>
+              <button type="button" class="wx-pill" data-value="rainy"  id="wx-rainy"  aria-pressed="false"><span class="wx-icon">🌧️</span><span class="wx-text">Rainy</span></button>
+              <button type="button" class="wx-pill" data-value="snowy"  id="wx-snowy"  aria-pressed="false"><span class="wx-icon">❄️</span><span class="wx-text">Snowy</span></button>
+              <button type="button" class="wx-pill" data-value="windy"  id="wx-windy"  aria-pressed="false"><span class="wx-icon">💨</span><span class="wx-text">Windy</span></button>
+            </div>
+            <p class="field-error" id="err-weather">Please select a weather type.</p>
+          </div>
+
+          <!-- Sliders row -->
+          <div class="sliders-row">
+            <div class="form-group flex1">
+              <label class="form-label-sm" for="commute-slider">Commute Difficulty (1–5)</label>
+              <input type="range" id="commute-slider" name="commute" min="1" max="5" value="3" class="light-slider" />
+              <div class="slider-ticks"><span>effortless</span><span>strenuous</span></div>
+            </div>
+            <div class="form-group flex1">
+              <label class="form-label-sm" for="stress-slider">Current Stress Level (1–5)</label>
+              <input type="range" id="stress-slider" name="stress" min="1" max="5" value="3" class="light-slider" />
+              <div class="slider-ticks"><span>serene</span><span>overwhelmed</span></div>
+            </div>
+          </div>
+
+          <!-- Mood slider -->
+          <div class="form-group">
+            <label class="form-label-sm" for="mood-slider">Daily Mood (1–5)</label>
+            <input type="range" id="mood-slider" name="mood" min="1" max="5" value="3" class="light-slider" />
+            <div class="slider-ticks"><span>low</span><span>radiant</span></div>
+          </div>
+
+          <!-- Effort radio -->
+          <div class="form-group" id="group-effort">
+            <label class="form-label-sm">Weather Induced Effort</label>
+            <div class="effort-row">
+              <label class="effort-opt" id="eff-none">
+                <input type="radio" name="effort" value="1" id="effort-none" />
+                <span>None</span>
+              </label>
+              <label class="effort-opt" id="eff-little">
+                <input type="radio" name="effort" value="2" id="effort-little" />
+                <span>A Little</span>
+              </label>
+              <label class="effort-opt selected" id="eff-lot">
+                <input type="radio" name="effort" value="3" id="effort-lot" />
+                <span>A Lot</span>
+              </label>
+            </div>
+            <p class="field-error" id="err-effort">Please select an option.</p>
+          </div>
+
+          <button type="submit" class="add-canvas-btn" id="add-canvas-btn">Add to the Canvas</button>
+          <div class="success-msg" id="success-msg" aria-live="polite">
+            Your check-in has been woven into the archive.
+          </div>
+        </form>
+      </section>
+
+      <!-- ── ATMOSPHERE / CANVAS ── id="atmosphere" -->
+      <section class="atmosphere-section" id="atmosphere">
+        <h2 class="section-heading">Collective Weather Canvas</h2>
+        <p class="section-sub">A generative landscape rendered from today's inputs. Each drift, glow, and shadow is a reflection of a real student's morning journey.</p>
+
+        <div class="canvas-container" id="canvas-container">
+          <canvas id="main-canvas"></canvas>
+          <div class="atm-key">
+            <div class="atm-key-title">Atmospheric Key</div>
+            <div class="atm-key-item"><span class="key-line"></span>Commute: path distortion</div>
+            <div class="atm-key-item"><span class="key-blob"></span>Stress: particle density</div>
+            <div class="atm-key-item"><span class="key-dot"></span>Mood: luminous intensity</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── STATS ── -->
+      <section class="stats-section" id="stats">
+        <h2 class="section-heading">At a Glance</h2>
+        <p class="section-sub">Averages across all check-ins.</p>
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-label">Most Reported Weather</div>
+            <div class="stat-big serif-italic" id="stat-weather">—</div>
+            <div class="stat-under" id="stat-weather-bar"></div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Avg Commute Difficulty</div>
+            <div class="stat-big serif-italic" id="stat-commute">—</div>
+            <div class="stat-under" id="stat-commute-sub">—</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Avg Stress Level</div>
+            <div class="stat-big serif-italic" id="stat-stress">—</div>
+            <div class="stat-under" id="stat-stress-sub">—</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Avg Mood</div>
+            <div class="stat-big serif-italic" id="stat-mood">—</div>
+            <div class="stat-under" id="stat-mood-sub">—</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── CHARTS ── -->
+      <section class="charts-section" id="archive">
+        <div class="charts-grid">
+          <div class="chart-card">
+            <div class="chart-title">Weather vs Average Stress</div>
+            <canvas id="stress-chart"></canvas>
+            <div class="chart-wx-icons">
+              <span title="Sunny">☀️</span>
+              <span title="Cloudy">☁️</span>
+              <span title="Rainy">🌧️</span>
+              <span title="Snowy">❄️</span>
+              <span title="Windy">💨</span>
+            </div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-title">Weather vs Commute Difficulty</div>
+            <canvas id="commute-chart"></canvas>
+            <div class="chart-wx-labels">
+              <span>Sunny</span><span>Cloudy</span><span>Rainy</span><span>Snowy</span><span>Windy</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── METHODOLOGY ── -->
+      <section class="methodology-section" id="methodology">
+        <div class="method-card">
+          <h2 class="method-title serif-italic">How the visualization<br>works</h2>
+          <p>The "Living Archive" is built on the principle of poetic translation. We don't just plot points on a grid; we map the internal friction of the student commute to atmospheric disturbances.</p>
+          <p>Each time a user submits a check-in, our algorithm interprets the numerical values through a series of visual metaphors. Weather provides the background texture—the "canvas" state. Commute difficulty distorts the paths of these elements, mirroring the literal and mental twists of a rough journey.</p>
+          <p>Stress levels define the density of visual noise, while mood acts as a global light source, illuminating or dimming the collective experience.</p>
+        </div>
+        <div class="method-orb" id="method-orb">
+          <canvas id="orb-canvas"></canvas>
+        </div>
+      </section>
+
+      <!-- ── FOOTER ── -->
+      <footer class="site-footer">
+        <span>© 2026 The Living Archive. All data is ephemeral.</span>
+        <div class="footer-links">
+          <a href="#" id="ft-privacy">Privacy</a>
+          <a href="#" id="ft-terms">Terms</a>
+          <a href="#methodology" id="ft-method">Methodology</a>
+          <a href="#" id="ft-support">Support</a>
+        </div>
+      </footer>
+
+    </main>
+  </div><!-- /layout -->
+
+  <script src="app.js"></script>
+</body>
+</html>
