@@ -13,7 +13,7 @@ export function saveData(arr) {
 }
 
 const SEED_VERSION_KEY = 'weatherMoodSeedVersion_v2';
-const CURRENT_SEED_VERSION = 5;
+const CURRENT_SEED_VERSION = 6;
 
 export function ensureSeedData() {
   const version = parseInt(localStorage.getItem(SEED_VERSION_KEY)) || 0;

@@ -35,33 +35,116 @@ export const WX_BG = {
 };
 
 export const SEED = [
-  // Day 1 — March 18, rainy morning
-  { weather:'rainy',  commute:4, stress:4, mood:2, effort:3, id:'aa1bb2cc3', timestamp:'2026-03-18T08:12:00Z' },
-  { weather:'rainy',  commute:3, stress:3, mood:3, effort:2, id:'bb2cc3dd4', timestamp:'2026-03-18T08:45:00Z' },
-  { weather:'rainy',  commute:5, stress:5, mood:1, effort:3, id:'cc3dd4ee5', timestamp:'2026-03-18T09:20:00Z' },
-  // Day 2 — March 19, sunny and clear
-  { weather:'sunny',  commute:1, stress:1, mood:5, effort:1, id:'dd4ee5ff6', timestamp:'2026-03-19T08:05:00Z' },
-  { weather:'sunny',  commute:2, stress:2, mood:4, effort:1, id:'ee5ff6gg7', timestamp:'2026-03-19T08:40:00Z' },
-  { weather:'sunny',  commute:1, stress:1, mood:5, effort:1, id:'ff6gg7hh8', timestamp:'2026-03-19T09:15:00Z' },
-  // Day 3 — March 20, snowy commute
-  { weather:'snowy',  commute:5, stress:4, mood:2, effort:3, id:'gg7hh8ii9', timestamp:'2026-03-20T08:10:00Z' },
-  { weather:'snowy',  commute:4, stress:3, mood:2, effort:3, id:'hh8ii9jj0', timestamp:'2026-03-20T08:50:00Z' },
-  // Day 4 — March 21, windy but manageable
-  { weather:'windy',  commute:3, stress:3, mood:3, effort:2, id:'ii9jj0kk1', timestamp:'2026-03-21T08:15:00Z' },
-  // Day 5 — March 22, overcast and calm
-  { weather:'cloudy', commute:2, stress:2, mood:4, effort:1, id:'jj0kk1ll2', timestamp:'2026-03-22T08:30:00Z' },
-  // Day 6 — March 23, cloudy turning to drizzle
-  { weather:'cloudy', commute:2, stress:3, mood:3, effort:2, id:'kk1ll2mm3', timestamp:'2026-03-23T08:00:00Z' },
-  { weather:'cloudy', commute:3, stress:3, mood:3, effort:2, id:'ll2mm3nn4', timestamp:'2026-03-23T08:35:00Z' },
-  // Day 7 — March 24, beautiful sunny day
-  { weather:'sunny',  commute:1, stress:1, mood:5, effort:1, id:'mm3nn4oo5', timestamp:'2026-03-24T07:50:00Z' },
-  { weather:'sunny',  commute:1, stress:2, mood:4, effort:1, id:'nn4oo5pp6', timestamp:'2026-03-24T08:25:00Z' },
-  { weather:'sunny',  commute:2, stress:1, mood:5, effort:1, id:'oo5pp6qq7', timestamp:'2026-03-24T09:10:00Z' },
-  // Day 8 — March 25, heavy wind and rain
-  { weather:'windy',  commute:4, stress:4, mood:2, effort:3, id:'pp6qq7rr8', timestamp:'2026-03-25T08:15:00Z' },
-  { weather:'windy',  commute:5, stress:5, mood:1, effort:3, id:'qq7rr8ss9', timestamp:'2026-03-25T08:50:00Z' },
-  { weather:'windy',  commute:4, stress:4, mood:2, effort:3, id:'rr8ss9tt0', timestamp:'2026-03-25T09:20:00Z' },
-  // Day 9 — March 26, light snow
-  { weather:'snowy',  commute:3, stress:3, mood:3, effort:2, id:'ss9tt0uu1', timestamp:'2026-03-26T08:10:00Z' },
-  { weather:'snowy',  commute:4, stress:3, mood:2, effort:2, id:'tt0uu1vv2', timestamp:'2026-03-26T08:55:00Z' },
+  // Day 1 — March 1, rainy morning
+  { weather:'rainy',  commute:4, stress:4, mood:2, effort:3, id:'s01a', timestamp:'2026-03-01T07:50:00Z' },
+  { weather:'rainy',  commute:3, stress:3, mood:3, effort:2, id:'s01b', timestamp:'2026-03-01T08:15:00Z' },
+  { weather:'rainy',  commute:5, stress:5, mood:1, effort:3, id:'s01c', timestamp:'2026-03-01T08:40:00Z' },
+  { weather:'rainy',  commute:4, stress:4, mood:2, effort:3, id:'s01d', timestamp:'2026-03-01T09:10:00Z' },
+  { weather:'rainy',  commute:3, stress:4, mood:2, effort:2, id:'s01e', timestamp:'2026-03-01T09:35:00Z' },
+  // Day 2 — March 2, still rainy
+  { weather:'rainy',  commute:4, stress:3, mood:2, effort:3, id:'s02a', timestamp:'2026-03-02T07:55:00Z' },
+  { weather:'rainy',  commute:3, stress:3, mood:3, effort:2, id:'s02b', timestamp:'2026-03-02T08:25:00Z' },
+  { weather:'rainy',  commute:5, stress:4, mood:1, effort:3, id:'s02c', timestamp:'2026-03-02T08:50:00Z' },
+  // Day 3 — March 3, cloudy but dry
+  { weather:'cloudy', commute:2, stress:2, mood:3, effort:1, id:'s03a', timestamp:'2026-03-03T08:00:00Z' },
+  { weather:'cloudy', commute:2, stress:3, mood:3, effort:2, id:'s03b', timestamp:'2026-03-03T08:30:00Z' },
+  { weather:'cloudy', commute:3, stress:2, mood:4, effort:1, id:'s03c', timestamp:'2026-03-03T09:00:00Z' },
+  { weather:'cloudy', commute:2, stress:2, mood:3, effort:1, id:'s03d', timestamp:'2026-03-03T09:25:00Z' },
+  // Day 4 — March 4, sunny break
+  { weather:'sunny',  commute:1, stress:1, mood:5, effort:1, id:'s04a', timestamp:'2026-03-04T07:45:00Z' },
+  { weather:'sunny',  commute:2, stress:2, mood:4, effort:1, id:'s04b', timestamp:'2026-03-04T08:20:00Z' },
+  { weather:'sunny',  commute:1, stress:1, mood:5, effort:1, id:'s04c', timestamp:'2026-03-04T08:55:00Z' },
+  { weather:'sunny',  commute:1, stress:2, mood:4, effort:1, id:'s04d', timestamp:'2026-03-04T09:15:00Z' },
+  { weather:'sunny',  commute:2, stress:1, mood:5, effort:1, id:'s04e', timestamp:'2026-03-04T09:40:00Z' },
+  // Day 5 — March 5, windy and cold
+  { weather:'windy',  commute:4, stress:4, mood:2, effort:3, id:'s05a', timestamp:'2026-03-05T08:00:00Z' },
+  { weather:'windy',  commute:3, stress:3, mood:3, effort:2, id:'s05b', timestamp:'2026-03-05T08:30:00Z' },
+  { weather:'windy',  commute:4, stress:4, mood:2, effort:3, id:'s05c', timestamp:'2026-03-05T09:00:00Z' },
+  // Day 6 — March 6, first snow
+  { weather:'snowy',  commute:5, stress:4, mood:2, effort:3, id:'s06a', timestamp:'2026-03-06T07:50:00Z' },
+  { weather:'snowy',  commute:4, stress:3, mood:2, effort:3, id:'s06b', timestamp:'2026-03-06T08:20:00Z' },
+  { weather:'snowy',  commute:5, stress:5, mood:1, effort:3, id:'s06c', timestamp:'2026-03-06T08:50:00Z' },
+  { weather:'snowy',  commute:4, stress:4, mood:2, effort:3, id:'s06d', timestamp:'2026-03-06T09:15:00Z' },
+  // Day 7 — March 7, sunny after snow
+  { weather:'sunny',  commute:2, stress:2, mood:4, effort:1, id:'s07a', timestamp:'2026-03-07T08:05:00Z' },
+  { weather:'sunny',  commute:1, stress:1, mood:5, effort:1, id:'s07b', timestamp:'2026-03-07T08:35:00Z' },
+  { weather:'sunny',  commute:2, stress:1, mood:5, effort:1, id:'s07c', timestamp:'2026-03-07T09:05:00Z' },
+  // Day 8 — March 8, cloudy and grey
+  { weather:'cloudy', commute:2, stress:3, mood:3, effort:2, id:'s08a', timestamp:'2026-03-08T08:10:00Z' },
+  { weather:'cloudy', commute:3, stress:3, mood:3, effort:2, id:'s08b', timestamp:'2026-03-08T08:40:00Z' },
+  // Day 9 — March 9, rainy again
+  { weather:'rainy',  commute:4, stress:4, mood:2, effort:3, id:'s09a', timestamp:'2026-03-09T07:55:00Z' },
+  { weather:'rainy',  commute:3, stress:3, mood:3, effort:2, id:'s09b', timestamp:'2026-03-09T08:25:00Z' },
+  { weather:'rainy',  commute:4, stress:5, mood:1, effort:3, id:'s09c', timestamp:'2026-03-09T08:55:00Z' },
+  { weather:'rainy',  commute:3, stress:4, mood:2, effort:2, id:'s09d', timestamp:'2026-03-09T09:20:00Z' },
+  // Day 10 — March 10, windy with gusts
+  { weather:'windy',  commute:4, stress:4, mood:2, effort:3, id:'s10a', timestamp:'2026-03-10T08:00:00Z' },
+  { weather:'windy',  commute:5, stress:5, mood:1, effort:3, id:'s10b', timestamp:'2026-03-10T08:30:00Z' },
+  { weather:'windy',  commute:3, stress:3, mood:3, effort:2, id:'s10c', timestamp:'2026-03-10T09:00:00Z' },
+  // Day 11 — March 11, sunny and mild
+  { weather:'sunny',  commute:1, stress:1, mood:5, effort:1, id:'s11a', timestamp:'2026-03-11T07:50:00Z' },
+  { weather:'sunny',  commute:1, stress:2, mood:4, effort:1, id:'s11b', timestamp:'2026-03-11T08:20:00Z' },
+  { weather:'sunny',  commute:2, stress:1, mood:5, effort:1, id:'s11c', timestamp:'2026-03-11T08:50:00Z' },
+  { weather:'sunny',  commute:1, stress:1, mood:5, effort:1, id:'s11d', timestamp:'2026-03-11T09:15:00Z' },
+  // Day 12 — March 12, cloudy and cool
+  { weather:'cloudy', commute:2, stress:2, mood:4, effort:1, id:'s12a', timestamp:'2026-03-12T08:05:00Z' },
+  { weather:'cloudy', commute:3, stress:3, mood:3, effort:2, id:'s12b', timestamp:'2026-03-12T08:35:00Z' },
+  { weather:'cloudy', commute:2, stress:2, mood:3, effort:1, id:'s12c', timestamp:'2026-03-12T09:05:00Z' },
+  // Day 13 — March 13, heavy snow
+  { weather:'snowy',  commute:5, stress:5, mood:1, effort:3, id:'s13a', timestamp:'2026-03-13T07:45:00Z' },
+  { weather:'snowy',  commute:5, stress:4, mood:2, effort:3, id:'s13b', timestamp:'2026-03-13T08:15:00Z' },
+  { weather:'snowy',  commute:4, stress:4, mood:2, effort:3, id:'s13c', timestamp:'2026-03-13T08:45:00Z' },
+  { weather:'snowy',  commute:5, stress:5, mood:1, effort:3, id:'s13d', timestamp:'2026-03-13T09:10:00Z' },
+  // Day 14 — March 14, cloudy thaw
+  { weather:'cloudy', commute:3, stress:3, mood:3, effort:2, id:'s14a', timestamp:'2026-03-14T08:00:00Z' },
+  { weather:'cloudy', commute:2, stress:2, mood:4, effort:1, id:'s14b', timestamp:'2026-03-14T08:30:00Z' },
+  // Day 15 — March 15, sunny spring day
+  { weather:'sunny',  commute:1, stress:1, mood:5, effort:1, id:'s15a', timestamp:'2026-03-15T07:50:00Z' },
+  { weather:'sunny',  commute:2, stress:2, mood:4, effort:1, id:'s15b', timestamp:'2026-03-15T08:20:00Z' },
+  { weather:'sunny',  commute:1, stress:1, mood:5, effort:1, id:'s15c', timestamp:'2026-03-15T08:50:00Z' },
+  // Day 16 — March 16, windy morning
+  { weather:'windy',  commute:3, stress:3, mood:3, effort:2, id:'s16a', timestamp:'2026-03-16T08:10:00Z' },
+  { weather:'windy',  commute:4, stress:4, mood:2, effort:3, id:'s16b', timestamp:'2026-03-16T08:40:00Z' },
+  // Day 17 — March 17, rainy and dark
+  { weather:'rainy',  commute:4, stress:4, mood:2, effort:3, id:'s17a', timestamp:'2026-03-17T07:55:00Z' },
+  { weather:'rainy',  commute:5, stress:5, mood:1, effort:3, id:'s17b', timestamp:'2026-03-17T08:25:00Z' },
+  { weather:'rainy',  commute:3, stress:3, mood:2, effort:2, id:'s17c', timestamp:'2026-03-17T08:55:00Z' },
+  // Day 18 — March 18, cloudy and mild
+  { weather:'cloudy', commute:2, stress:2, mood:4, effort:1, id:'s18a', timestamp:'2026-03-18T08:00:00Z' },
+  { weather:'cloudy', commute:2, stress:3, mood:3, effort:1, id:'s18b', timestamp:'2026-03-18T08:30:00Z' },
+  { weather:'cloudy', commute:3, stress:2, mood:3, effort:2, id:'s18c', timestamp:'2026-03-18T09:00:00Z' },
+  // Day 19 — March 19, sunny and warm
+  { weather:'sunny',  commute:1, stress:1, mood:5, effort:1, id:'s19a', timestamp:'2026-03-19T07:45:00Z' },
+  { weather:'sunny',  commute:1, stress:1, mood:5, effort:1, id:'s19b', timestamp:'2026-03-19T08:15:00Z' },
+  { weather:'sunny',  commute:2, stress:2, mood:4, effort:1, id:'s19c', timestamp:'2026-03-19T08:45:00Z' },
+  { weather:'sunny',  commute:1, stress:1, mood:5, effort:1, id:'s19d', timestamp:'2026-03-19T09:10:00Z' },
+  // Day 20 — March 20, snowy surprise
+  { weather:'snowy',  commute:4, stress:3, mood:2, effort:3, id:'s20a', timestamp:'2026-03-20T08:00:00Z' },
+  { weather:'snowy',  commute:5, stress:4, mood:2, effort:3, id:'s20b', timestamp:'2026-03-20T08:30:00Z' },
+  { weather:'snowy',  commute:4, stress:4, mood:2, effort:3, id:'s20c', timestamp:'2026-03-20T09:00:00Z' },
+  // Day 21 — March 21, windy and brisk
+  { weather:'windy',  commute:3, stress:3, mood:3, effort:2, id:'s21a', timestamp:'2026-03-21T08:05:00Z' },
+  { weather:'windy',  commute:4, stress:3, mood:3, effort:2, id:'s21b', timestamp:'2026-03-21T08:35:00Z' },
+  // Day 22 — March 22, cloudy calm
+  { weather:'cloudy', commute:2, stress:2, mood:4, effort:1, id:'s22a', timestamp:'2026-03-22T08:10:00Z' },
+  // Day 23 — March 23, rainy commute
+  { weather:'rainy',  commute:4, stress:4, mood:2, effort:3, id:'s23a', timestamp:'2026-03-23T07:50:00Z' },
+  { weather:'rainy',  commute:3, stress:3, mood:3, effort:2, id:'s23b', timestamp:'2026-03-23T08:20:00Z' },
+  // Day 24 — March 24, sunny
+  { weather:'sunny',  commute:1, stress:1, mood:5, effort:1, id:'s24a', timestamp:'2026-03-24T08:00:00Z' },
+  { weather:'sunny',  commute:2, stress:2, mood:4, effort:1, id:'s24b', timestamp:'2026-03-24T08:30:00Z' },
+  { weather:'sunny',  commute:1, stress:1, mood:5, effort:1, id:'s24c', timestamp:'2026-03-24T09:00:00Z' },
+  // Day 25 — March 25, heavy wind
+  { weather:'windy',  commute:5, stress:5, mood:1, effort:3, id:'s25a', timestamp:'2026-03-25T08:00:00Z' },
+  { weather:'windy',  commute:4, stress:4, mood:2, effort:3, id:'s25b', timestamp:'2026-03-25T08:30:00Z' },
+  { weather:'windy',  commute:4, stress:4, mood:2, effort:3, id:'s25c', timestamp:'2026-03-25T09:00:00Z' },
+  // Day 26 — March 26, light snow
+  { weather:'snowy',  commute:3, stress:3, mood:3, effort:2, id:'s26a', timestamp:'2026-03-26T08:10:00Z' },
+  { weather:'snowy',  commute:4, stress:3, mood:2, effort:2, id:'s26b', timestamp:'2026-03-26T08:45:00Z' },
+  // Day 27 — March 27, cloudy
+  { weather:'cloudy', commute:2, stress:2, mood:4, effort:1, id:'s27a', timestamp:'2026-03-27T08:00:00Z' },
+  { weather:'cloudy', commute:3, stress:3, mood:3, effort:2, id:'s27b', timestamp:'2026-03-27T08:30:00Z' },
+  { weather:'cloudy', commute:2, stress:2, mood:3, effort:1, id:'s27c', timestamp:'2026-03-27T09:00:00Z' },
+  { weather:'cloudy', commute:3, stress:3, mood:3, effort:2, id:'s27d', timestamp:'2026-03-27T09:25:00Z' },
+  { weather:'cloudy', commute:2, stress:2, mood:4, effort:1, id:'s27e', timestamp:'2026-03-27T09:50:00Z' },
 ];
