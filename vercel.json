@@ -1,0 +1,10 @@
+{
+  "buildCommand": "cd react-app && npm install && npm run build",
+  "outputDirectory": "react-app/dist",
+  "framework": null,
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/checkins" },
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  ],
+  "installCommand": "npm install && cd react-app && npm install"
+}

@@ -1,25 +1,27 @@
-import { STORAGE_KEY, SEED } from './constants';
+const API = '/api/checkins';
 
-export function loadData() {
+export async function loadData() {
   try {
-    return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
-  } catch {
+    const res = await fetch(API);
+    if (!res.ok) throw new Error(res.statusText);
+    return await res.json();
+  } catch (err) {
+    console.error('Failed to load check-ins:', err);
     return [];
   }
 }
 
-export function saveData(arr) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
-}
-
-const SEED_VERSION_KEY = 'weatherMoodSeedVersion_v2';
-const CURRENT_SEED_VERSION = 6;
-
-export function ensureSeedData() {
-  const version = parseInt(localStorage.getItem(SEED_VERSION_KEY)) || 0;
-  if (version < CURRENT_SEED_VERSION) {
-    saveData([...SEED]);
-    localStorage.setItem(SEED_VERSION_KEY, CURRENT_SEED_VERSION);
+export async function saveCheckIn(entry) {
+  try {
+    const res = await fetch(API, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(entry),
+    });
+    if (!res.ok) throw new Error(res.statusText);
+    return await res.json();
+  } catch (err) {
+    console.error('Failed to save check-in:', err);
+    return null;
   }
-  return loadData();
 }

@@ -7,26 +7,37 @@ import StatsSection from './components/StatsSection';
 import ChartsSection from './components/ChartsSection';
 import MethodologySection from './components/MethodologySection';
 import Footer from './components/Footer';
-import { ensureSeedData, loadData, saveData } from './utils/storage';
+import { loadData, saveCheckIn } from './utils/storage';
 
 export default function App() {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const initial = ensureSeedData();
-    setData(initial);
+    loadData()
+      .then(d => {
+        console.log('[App] Loaded', d.length, 'check-ins from backend');
+        setData(d);
+      })
+      .catch(err => console.error('[App] Load error:', err))
+      .finally(() => setLoading(false));
   }, []);
 
-  const handleCheckIn = useCallback((entry) => {
-    const current = loadData();
-    current.push(entry);
-    saveData(current);
-    setData([...current]);
+  const handleCheckIn = useCallback(async (entry) => {
+    const saved = await saveCheckIn(entry);
+    if (saved) {
+      console.log('[App] Saved new check-in:', saved.id);
+      setData(prev => [...prev, saved]);
+    }
 
     setTimeout(() => {
       document.getElementById('canvas-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }, 100);
   }, []);
+
+  if (loading) {
+    return <div style={{ padding: '4rem', textAlign: 'center', fontFamily: 'Inter, sans-serif' }}>Loading check-ins from server...</div>;
+  }
 
   return (
     <>
